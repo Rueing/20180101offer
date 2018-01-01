@@ -49,7 +49,7 @@ public:
 
 int main(int argc, char *argv[])
 {
-	char str[] = "We Are Happy"; //12个字符，不包括\0
+	char str[] = "We Are Happy"; //12个字符，包含'\0'
 	//char str[13] = "We Are Happy"; //不能为12，应是13
 	cout << str << endl;
 	cout << strlen(str) << endl;
