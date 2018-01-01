@@ -13,7 +13,7 @@ public:
 			if (target < array[i][j])
 				--j;
 			else if (target > array[i][j])
-				++j;
+				++i;
 			else
 			{
 				flag = true;
