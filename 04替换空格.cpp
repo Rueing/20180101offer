@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
 	void replaceSpace(char *str, int length) {
-		//判断输入是够为空
+		//判断输入是否为空
 		if (str == NULL || length <= 0)
 			return;
 
