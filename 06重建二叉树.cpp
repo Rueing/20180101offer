@@ -11,7 +11,7 @@ class Solution {
 public:
     TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin) 
     {
-      //判断pre、vin大小是否相同、是否为空
+    	//判断pre、vin大小是否相同、是否为空
     	if (pre.size() != vin.size() || pre.empty())
     		return nullptr;
     	return reConstructBinaryTreeCode(pre, vin, 0, pre.size() - 1, 0, vin.size() - 1);
@@ -38,7 +38,7 @@ private:
     		++vinRootIndex;
 
     	//3.(在中序)计算左(右)子树序列的长度
-    	if (vinRootIndex > vinRight)//细节：没有找着
+    	if (vinRootIndex > vinRight)//细节：没有找着跟结点
     		throw std::runtime_error("cannot find root in vin");
     	int leftTreeSonLength = vinRootIndex - vinLeft;
     	int rightTreeSonlength = vinRight - vinRootIndex;
@@ -48,8 +48,8 @@ private:
     	//左子树
     	if (leftTreeSonLength > 0)
     		root->left = reConstructBinaryTreeCode(pre, vin,
-    											   preLeft + 1, preLeft + leftTreeSonLength,
-    											   vinLeft, vinRootIndex - 1);
+    												preLeft + 1, preLeft + leftTreeSonLength,
+    												vinLeft, vinRootIndex - 1);
     	//右子树
     	if (rightTreeSonlength > 0)
     		root->right = reConstructBinaryTreeCode(pre, vin,
