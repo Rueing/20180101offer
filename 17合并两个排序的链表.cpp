@@ -30,7 +30,7 @@ public:
         }
         else
         {
-			pHead = pHead2;
+		pHead = pHead2;
         	pHead2 = pHead2->next;
         }
         	
