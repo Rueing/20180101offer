@@ -22,11 +22,11 @@ class Solution {
 public:
     bool HasSubtree(TreeNode* pRoot1, TreeNode* pRoot2)
     {
-		bool flag = false;
+	bool flag = false;
         
         if (pRoot1 != nullptr && pRoot2 != nullptr)
         {
-        	//前序遍历
+            //前序遍历
             if (pRoot1->val == pRoot2->val)
                 flag = DoseTree1HaveTree2(pRoot1, pRoot2);
             if(flag == false)
