@@ -19,8 +19,8 @@ public:
     
 private:
     TreeNode* reConstructBinaryTreeCode(vector<int> pre, vector<int> vin,
-    									                  int preLeft, int preRight,
-    									                  int vinLeft, int vinRight)
+    									int preLeft, int preRight,
+    									int vinLeft, int vinRight)
     {
     	//1.由前序确定根结点
     	TreeNode *root = new TreeNode(pre[preLeft]);
@@ -48,13 +48,13 @@ private:
     	//左子树
     	if (leftTreeSonLength > 0)
     		root->left = reConstructBinaryTreeCode(pre, vin,
-    												                   preLeft + 1, preLeft + leftTreeSonLength,
-    												                   vinLeft, vinRootIndex - 1);
+    											   preLeft + 1, preLeft + leftTreeSonLength,
+    											   vinLeft, vinRootIndex - 1);
     	//右子树
     	if (rightTreeSonlength > 0)
     		root->right = reConstructBinaryTreeCode(pre, vin,
-    												                    preLeft + leftTreeSonLength + 1, preRight,
-    												                    vinRootIndex + 1, vinRight);
+    												preLeft + leftTreeSonLength + 1, preRight,
+    												vinRootIndex + 1, vinRight);
 
     	return root;
     }
