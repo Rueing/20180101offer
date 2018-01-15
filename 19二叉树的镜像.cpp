@@ -18,8 +18,8 @@ public:
     {
     	if (pRoot == nullptr)
     		return;
-		  //前序
-    	tempNode = pRoot->left;
+	//前序
+    	TreeNode *tempNode = pRoot->left;
     	pRoot->left = pRoot->right;
     	pRoot->right = tempNode;
 
