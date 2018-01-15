@@ -32,7 +32,7 @@ public:
             if(flag == false)
             	flag = HasSubtree(pRoot1->left, pRoot2);
             if(flag == false)
-            	flag = HasSubtree(pRoot1->right, pRoot2)
+            	flag = HasSubtree(pRoot1->right, pRoot2);
         }
         
         return flag;
