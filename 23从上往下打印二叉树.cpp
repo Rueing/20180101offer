@@ -18,7 +18,7 @@ public:
     	if (root == nullptr)
     		return vector<int>();
 
-		vector<int> output;
+	vector<int> output;
     	queue<TreeNode*> hyQueue;
     	hyQueue.push(root);
     	
