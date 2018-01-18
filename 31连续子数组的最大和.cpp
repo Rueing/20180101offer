@@ -8,6 +8,7 @@
 
 // 思路：举例理解加法过程即可
 //       **如何 sum<0，那么将sum至为下一数字！**
+//       注意全为 负数 的情况！
 class Solution {
 public:
     int FindGreatestSumOfSubArray(vector<int> array) 
