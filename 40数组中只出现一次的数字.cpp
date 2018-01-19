@@ -8,6 +8,18 @@
 // 位运算时，注意优先级，保险加上括号！
 class Solution {
 public:
+	//1、数组中只有1个数出现1次，其他都出现2次
+	int FindOnceOtherTwice(vector<int> data)
+	{
+		if (data.empty())
+			throw std::invalid_argument("array is empty!");
+		int result;
+		for (auto val : data)
+			result ^= val;
+		return result;
+	}
+
+	//2、数组中只有2个数出现1次，其他都出现2次
     void FindNumsAppearOnce(vector<int> data, int* num1, int *num2) 
     {
     	if (data.empty())
