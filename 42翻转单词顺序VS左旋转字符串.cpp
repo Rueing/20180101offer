@@ -68,7 +68,7 @@ public:
     				stack2.pop();
     			}
     			output += stack1.top();//空格也要加上
-                stack1.pop();//不要忘记！！！
+                	stack1.pop();//不要忘记！！！
     		}
     	}
     	//最后一次（最后一个单词）没有遇到分隔符' '，需要另行加上
