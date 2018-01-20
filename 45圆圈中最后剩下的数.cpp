@@ -3,7 +3,7 @@
 
 class Solution {
 public:
-	//法1：用环形链表模拟圆圈***
+    //法1：用环形链表模拟圆圈***
 
     //法2：递推公式（推导一遍）
     int LastRemaining_Solution(int n, int m)
