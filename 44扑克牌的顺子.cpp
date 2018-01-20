@@ -25,12 +25,13 @@ public:
         	if (numbers[j] == numbers[j - 1])
         		return false;
         	else
+        	{
         		gap += numbers[j] - numbers[j - 1] - 1;
+        		if (numOfZero < gap)//!每有gap时就比较，可能可以提前退出循环，返回false
+        			return false;
+        	}
         }
-        if (numOfZero >= gap)
-        	return true;
-        else
-        	return false;
+        return true;
     }
 
     //另一种思路：极大极小值的差值与0的个数比较，但还是需要计算是否存在重复数字
