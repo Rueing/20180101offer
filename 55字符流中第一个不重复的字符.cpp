@@ -17,23 +17,23 @@ public:
 		str = "";
 		memset(count, '\0', sizeof(count));
 	}
-  //Insert one char from stringstream
-    void Insert(char ch)
-    {
-         str += ch;
-         ++count[(int)ch];
-    }
-  //return the first appearence once char in current stringstream
-    char FirstAppearingOnce()
-    {
-    	int strLen = str.size();
-    	for (int i = 0; i < strLen; ++i)
+  	//Insert one char from stringstream
+   	void Insert(char ch)
     	{
-    		if (count[(int)str[i]] == 1)
-    			return str[i];
+         	str += ch;
+         	++count[(int)ch];
     	}
-    	return '#';
-    }
+  	//return the first appearence once char in current stringstream
+    	char FirstAppearingOnce()
+    	{
+    		int strLen = str.size();
+    		for (int i = 0; i < strLen; ++i)
+    		{
+    			if (count[(int)str[i]] == 1)
+    				return str[i];
+    		}
+    		return '#';
+    	}
 
 private:
 	std::string str;
