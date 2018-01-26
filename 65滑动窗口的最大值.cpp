@@ -8,7 +8,7 @@
 // {2,3,4,[2,6,2],5,1}， {2,3,4,2,[6,2,5],1}， {2,3,4,2,6,[2,5,1]}。
 class Solution {
 public:
-	//法1：暴力解法，时间复杂度o(mn)
+    //法1：暴力解法，时间复杂度o(mn)
     vector<int> maxInWindows1(const vector<int>& num, unsigned int size)
     {
         if(num.size() <= 0 || size > num.size() || size <= 0)
@@ -42,9 +42,9 @@ public:
     	deque<int> deq;
     	for(unsigned int i = 0; i < num.size(); ++i)//o(n)
     	{
-    		while(deq.size() && num[deq.back()] <= num[i])//1、尾部处理
+    		while(!deq.empty() && num[deq.back()] <= num[i])//1、尾部处理
     			deq.pop_back();
-    		while(deq.size() && size < i - deq.front() + 1)//2、头部处理
+    		while(!deq.empty() && size < i - deq.front() + 1)//2、头部处理
     			deq.pop_front();
     		deq.push_back(i);//3
     		if(i >= size - 1)
