@@ -14,7 +14,7 @@ struct TreeNode {
 */
 class Solution {
 public:
-	//法1：中序遍历 一遍
+    //法1：中序遍历 一遍
     TreeNode* KthNode1(TreeNode* pRoot, int k)
     {
         if(pRoot == nullptr || k < 1)
@@ -66,15 +66,17 @@ public:
 class Solution {
     int count = 0;
 public:
-    TreeNode* KthNode(TreeNode* pRoot, unsigned int k)
+    TreeNode* KthNode(TreeNode* pRoot, int k)
     {
-        if(pRoot){ 
-                TreeNode *ret = KthNode(pRoot->left, k);
-                if(ret) return ret;
-                if(++count == k) return pRoot;
-                ret = KthNode(pRoot->right,k);
-                if(ret) return ret;
-        }
+        if(!pRoot || k < 1)
+            return nullptr;
+        
+        TreeNode *ret = KthNode(pRoot->left, k);
+        if(ret) return ret;
+        if(++count == k) return pRoot;
+        ret = KthNode(pRoot->right,k);
+        if(ret) return ret;
+
         return nullptr;
     }
 };
