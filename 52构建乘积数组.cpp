@@ -12,7 +12,7 @@ public:
     	//法1：双重循环遍历O(n^2)
     	//法2：不要重复计算，拆分，夹逼
     	int n = A.size();
-    	vector<int> B(n);
+    	vector<int> B(n, 1);
     	// C[i] = A[0] * A[1] * ... *A[i - 1]
     	int temp = 1;
     	for (int i = 0; i < n; ++i)
